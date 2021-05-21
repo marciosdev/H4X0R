@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5234B3C2654A2A300C2D3B2 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5234B3B2654A2A300C2D3B2 /* DetailView.swift */; };
+		D5234B3E2654A77B00C2D3B2 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5234B3D2654A77B00C2D3B2 /* WebView.swift */; };
+		D58713322654654300B86005 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58713312654654300B86005 /* NetworkManager.swift */; };
+		D587133426546A5200B86005 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D587133326546A5200B86005 /* PostData.swift */; };
 		D5A59C6826535B56008A52B7 /* H4X0RApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A59C6726535B56008A52B7 /* H4X0RApp.swift */; };
 		D5A59C6A26535B56008A52B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A59C6926535B56008A52B7 /* ContentView.swift */; };
 		D5A59C6C26535B58008A52B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5A59C6B26535B58008A52B7 /* Assets.xcassets */; };
@@ -14,6 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5234B3B2654A2A300C2D3B2 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		D5234B3D2654A77B00C2D3B2 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		D54DBD8D2655B20F00195255 /* H4X0R.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = H4X0R.entitlements; sourceTree = "<group>"; };
+		D58713312654654300B86005 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D587133326546A5200B86005 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		D5A59C6426535B56008A52B7 /* H4X0R.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = H4X0R.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5A59C6726535B56008A52B7 /* H4X0RApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4X0RApp.swift; sourceTree = "<group>"; };
 		D5A59C6926535B56008A52B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +42,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D5234B362654A22100C2D3B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5A59C6926535B56008A52B7 /* ContentView.swift */,
+				D5234B3B2654A2A300C2D3B2 /* DetailView.swift */,
+				D5234B3D2654A77B00C2D3B2 /* WebView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D58713302654651F00B86005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D58713312654654300B86005 /* NetworkManager.swift */,
+				D587133326546A5200B86005 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D5A59C5B26535B56008A52B7 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +80,10 @@
 		D5A59C6626535B56008A52B7 /* H4X0R */ = {
 			isa = PBXGroup;
 			children = (
+				D54DBD8D2655B20F00195255 /* H4X0R.entitlements */,
 				D5A59C6726535B56008A52B7 /* H4X0RApp.swift */,
-				D5A59C6926535B56008A52B7 /* ContentView.swift */,
+				D5234B362654A22100C2D3B2 /* Views */,
+				D58713302654651F00B86005 /* Models */,
 				D5A59C6B26535B58008A52B7 /* Assets.xcassets */,
 				D5A59C7026535B58008A52B7 /* Info.plist */,
 				D5A59C6D26535B58008A52B7 /* Preview Content */,
@@ -138,7 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58713322654654300B86005 /* NetworkManager.swift in Sources */,
+				D587133426546A5200B86005 /* PostData.swift in Sources */,
 				D5A59C6A26535B56008A52B7 /* ContentView.swift in Sources */,
+				D5234B3E2654A77B00C2D3B2 /* WebView.swift in Sources */,
+				D5234B3C2654A2A300C2D3B2 /* DetailView.swift in Sources */,
 				D5A59C6826535B56008A52B7 /* H4X0RApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,8 +301,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4X0R/H4X0R.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = H4X0R/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -276,8 +313,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Marcio-Silva.H4X0R";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,8 +327,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = H4X0R/H4X0R.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4X0R/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = H4X0R/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -297,8 +339,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Marcio-Silva.H4X0R";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
